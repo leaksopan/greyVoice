@@ -19,6 +19,7 @@ On this Windows machine, the npm command shim cannot launch cmd.exe. Equivalent 
 
 - `app/page.tsx`: copy, navigation, fictional clinical draft demonstration, approval gate, EMR mapping, downloadable integration planner.
 - `app/globals.css`: responsive design, reduced-motion support, typography.
+- `hooks/use-page-motion.ts`: staggered scroll reveals, desktop hero parallax, active navigation, and reading progress. Uses native browser APIs; reduced motion and keyboard focus keep content immediately accessible.
 - `lib/pricing.mjs`: illustrative rates ($0.012 transcription / $0.024 clinical draft) and calculator.
 - `public/images/`: two original AI-generated healthcare images, optimized as WebP.
 
