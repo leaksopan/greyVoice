@@ -1,0 +1,10 @@
+import assert from "node:assert/strict";
+import { calculateCost } from "../lib/pricing.mjs";
+assert.equal(calculateCost(5000, "clinical"), 200);
+assert.equal(calculateCost(5000, "transcription"), 100);
+assert.equal(calculateCost(1.5, "transcription"), 0.03);
+assert.equal(calculateCost(0, "clinical"), 0);
+for (const invalid of [-1, NaN, Infinity]) assert.throws(() => calculateCost(invalid, "clinical"), RangeError);
+assert.throws(() => calculateCost(10, "unknown"), RangeError);
+assert.throws(() => calculateCost(10, "toString"), RangeError);
+console.log("Pricing checks passed.");
