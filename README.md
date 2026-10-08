@@ -25,6 +25,8 @@ On this Windows machine, the npm command shim cannot launch cmd.exe. Equivalent 
 
 ## Integration status
 
+Dev2 deployment and Cloudflare DNS instructions: [deploy/dev2/README.md](deploy/dev2/README.md). Run `npm run build:dev2` for a public static export of the same React page.
+
 The landing page is a marketing experience. It does not record real consultations, contact a backend, submit leads, take payments, or send data to an EMR. The draft demo uses fictional data and exports a sample JSON file. The Request a demo form validates required fields and shows a local preview confirmation; it does not submit or persist the entered information. Connect a real sales contact or lead endpoint before public launch.
 
 Product context was read from `D:/Kerja/emr-voice-to-text` and the Puskesmas medical-record source. Neither source project was modified. Current adapters are proof-of-concept; client connectors require separate implementation and validation. No patient data, credentials, recordings, or proprietary source from those projects is published here. Prices, billing rules, and the GreyVoice brand are starting points for review.

@@ -1,0 +1,17 @@
+http:
+  routers:
+    greyvoice-http:
+      rule: Host(`grenery.xyz`) || Host(`www.grenery.xyz`)
+      entryPoints: [web]
+      service: greyvoice-web
+    greyvoice-https:
+      rule: Host(`grenery.xyz`) || Host(`www.grenery.xyz`)
+      entryPoints: [websecure]
+      service: greyvoice-web
+      tls:
+        certResolver: letsencrypt
+  services:
+    greyvoice-web:
+      loadBalancer:
+        servers:
+          - url: http://greyvoice-web:80
